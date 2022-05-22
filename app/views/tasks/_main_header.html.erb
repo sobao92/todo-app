@@ -3,9 +3,7 @@
     <a href="#">TODO</a>
   </div>
   <div class="header_right_items">
-    <div class="header_name">
-      <%= link_to current_user.nickname, edit_user_path(current_user), class: 'header_name' %>
-    </div>
+    <%= link_to current_user.nickname, edit_user_path(current_user), class: 'header_name' %>
     <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'logout_btn' %>
   </div>
 </div>
