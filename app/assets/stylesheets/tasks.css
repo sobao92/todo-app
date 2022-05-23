@@ -46,6 +46,17 @@
   height: calc(100vh - 3.7em);
 }
 
+.create_task_btn {
+	text-decoration: none;
+	background-color: #ee3e52;
+	color: #fff;
+	border: 1px solid #ee3e52;
+  border-radius: 5px;
+	padding: 20px;
+  text-align: center;
+	font-size: 1em;
+}
+
 /* ここからタブ切り替えCSS */
 .cp_tab *, .cp_tab *:before, .cp_tab *:after {
 	-webkit-box-sizing: border-box;
@@ -114,6 +125,7 @@
 .cp_tabpanel h2 {
   padding-top: 1em;
   font-size: 2em;
+	margin-bottom: 1em;
 }
 /* ここまでタブ切り替えCSS */
 
