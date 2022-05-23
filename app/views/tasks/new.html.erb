@@ -23,6 +23,9 @@
       <div class='create-task-form__field--left'></div>
       <div class='create-task-form__field--right'>
         <%= f.submit class: 'create-task-form__action-btn'%>
+          <div class='back-btn'>
+            <%= link_to "戻る", root_path, :style => "color: #fff;" %>
+          </div>
       </div>
     </div>
   <% end %>
