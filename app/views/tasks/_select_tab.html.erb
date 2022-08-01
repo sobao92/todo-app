@@ -8,6 +8,43 @@
 		<div id="first_tab01" class="cp_tabpanel">
 		  <h2>WORK OUT TASKS</h2>
 		  <%= link_to "Create New Task", new_task_path, class: 'create_task_btn' %>
+				<table class="task_list">
+				  <thead>
+					  <tr>
+						  <th width="90px">State</th>
+							<th width="400px">Task</th>
+							<th>Memo</th>
+							<th width="50px"></th>
+							<th width="50px"></th>
+							<th width="50px"></th>
+						</tr>
+					</thead>
+					<tbody>
+				    <% @tasks.each do |task| %>
+				    <tr>
+						  <td>
+					      <% if    task.state == 'todo' %>
+                <p class="btn btn-small  btn-block"><%= task.state %></p>
+                <% elsif task.state == 'doing' %>
+                <p class="btn btn-small btn-block amber"><%= task.state %></p>
+                <% elsif task.state == 'done' %>
+                <p class="btn btn-small disabled btn-block grey"><%= task.state %></p>
+								<% else %>
+                <p class="btn btn-small disabled btn-block"><%= task.state %></p>
+                <% end %>
+							</td>
+			        <td><%= task.task_title %></td>
+					    <td><%= task.task_description %></td>
+							<td>
+							  <%= link_to "編集", class: 'edit_btn', id: 'edit-btn' %>
+							<td>
+							<td>
+							  <%= link_to "削除", class: 'delete_btn' %>
+							</td>
+						</tr>
+					  <% end %>
+				  </tbody>
+				</table>
 		</div>
 		<div id="second_tab01" class="cp_tabpanel">
 		  <h2>Meal Records</h2>
