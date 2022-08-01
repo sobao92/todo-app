@@ -1,0 +1,56 @@
+<head>
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+
+<div class='create-task-form'>
+  <h2>Edit The Task</h2>
+  <%= form_with url: task_path, model: @task, local: true do |f| %>
+    <div class='create-task-form__field'>
+      <div class='create-task-form__field--left'>
+        <%= f.label :Task, class: 'create-task-form__label'%>
+      </div>
+      <div class='create-task-form__field--right'>
+        <%= f.text_field :task_title, class: 'create__task_name create-task-form__input', placeholder: 'タスク名を入力してください'%>
+      </div>
+    </div>
+    <div class='create-task-form__field'>
+    </div>
+    <div class='create-task-form__field'>
+      <div class='create-task-form__field--left'>
+        <%= f.label :Memo, class: 'create-task-form__label'%>
+      </div>
+      <div class='create-task-form__field--right'>
+        <%= f.text_field :task_description, class: 'create__task_name create-task-form__input', placeholder: 'タスクの詳細を入力してください'%>
+      </div>
+    </div>
+    <div class='create-task-form__field'>
+      <div class='create-task-form__field--left'>
+        <%= f.label :State, class: 'create-task-form__label'%>
+      </div>
+      <div class='create-task-form__select'>
+        <div class="input-field col s12">
+          <%= f.select :state, [["", ""],["todo", "todo"], ["doing", "doing"], ["done", "done"]] %>
+        </div>
+      </div>
+    </div>
+    <div class='create-task-form__field'>
+      <div class='create-task-form__field--left'></div>
+      <div class='create-task-form__field--right'>
+        <%= f.submit class: 'create-task-form__action-btn'%>
+          <div class='back-btn'>
+            <%= link_to "Back", root_path, :style => "color: #fff;" %>
+          </div>
+      </div>
+    </div>
+  <% end %>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('select');
+      var instances = M.FormSelect.init(elems,[]);
+    }); 
+  </script>
+
+</div>
