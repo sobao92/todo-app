@@ -57,3 +57,6 @@ gem 'devise'
 
 gem 'materialize-sass', '~> 1.0.0'
 gem 'material_icons' 
+
+gem 'mini_magick'
+gem 'image_processing', '~> 1.2'
