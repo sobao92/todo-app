@@ -123,11 +123,10 @@
   font-weight: bold;
 }
 .cp_tabpanel h2 {
-  padding-top: 1em;
+	font-weight: bold;
   font-size: 2em;
-	margin-bottom: 1em;
+	margin-bottom: 1.5em;
 }
-/* ここまでタブ切り替えCSS */
 
 /* 新規作成画面 */
 .create-task-form h2 {
@@ -159,6 +158,13 @@
   line-height: 50px;
   font-weight: bold;
   text-align: right;
+	font-size: 1em;
+	color: #000;
+}
+.create-task-form__select {
+	float: left;
+  position: relative;
+	width: 70%;
 }
 .create-task-form__input {
   float: left;
@@ -169,7 +175,7 @@
 }
 .create-task-form__action-btn {
   display: inline-block;
-  padding: 12px 20px;
+  padding: 15px 20px;
   color: #fff;
   background-color: #ee3e52;
   border: 0;
@@ -205,4 +211,24 @@
 .create-task-form__field--right {
   float: right;
   width: 70%;
+}
+
+/* リストデザイン */
+.task_list {
+	margin-top: 70px;
+  width: 100%;
+	text-align: center;
+	border-collapse: collapse;
+	border-spacing: 0;
+	background-color: #fff;
+}
+
+.task_list th {
+	font-weight: bold;
+	border-bottom: solid 2px #ee3e52;
+}
+
+.edit_btn,
+.delete_btn {
+	text-decoration: none;
 }
