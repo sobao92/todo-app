@@ -5,7 +5,7 @@
 
 <div class='create-task-form'>
   <h2>Edit The Task</h2>
-  <%= form_with url: tasks_path, model: @task, local: true do |f| %>
+  <%= form_with url: task_path, model: @task, local: true do |f| %>
     <div class='create-task-form__field'>
       <div class='create-task-form__field--left'>
         <%= f.label :Task, class: 'create-task-form__label'%>
