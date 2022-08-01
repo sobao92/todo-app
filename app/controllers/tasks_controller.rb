@@ -1,5 +1,7 @@
 class TasksController < ApplicationController
   def index
+    @tasks = Task.all.order('created_at DESC')
+    @state = ['todo', 'done']
   end
 
   def new
@@ -18,6 +20,6 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:task).permit(:task_title, :task_description).merge(user_id: current_user.id)
+    params.require(:task).permit(:task_title, :task_description, :state).merge(user_id: current_user.id)
   end
 end
