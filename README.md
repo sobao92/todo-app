@@ -1,24 +1,57 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## アプリケーション名
+TODO
 
-Things you may want to cover:
+## アプリケーション概要
+ワークアウトのタスク管理と食事の記録ができる。
 
-* Ruby version
+## URL
 
-* System dependencies
 
-* Configuration
+## テスト用アカウント
+- Basic認証パスワード：
+- Basic認証ID：
+- メールアドレス
+- パスワード
 
-* Database creation
+## 利用方法
+### タスク投稿
+1. アプリケーションを開くとログイン画面が開くので、「Sign up」のリンクをクリックしユーザー新規登録を行う。
+2. 一覧ページの「WORK OUT」タブで「Create New Task」をクリックし、タスク名・タスクの詳細・タスクの状態(todoもしくはdoingを選択)を入力し、「Create Task」をクリックする。
 
-* Database initialization
+### 食事画像投稿
+1. 一覧ページのMEALタブから朝食・昼食・夕食それぞれにある「＋」ボタンをクリックし、食事の画像とその詳細を入力し「Done」をクリックする。
 
-* How to run the test suite
+## アプリケーションを作成した背景
+コロナ禍により自宅にいる時間が増えたため動画を見ながらのボディメイクを始めたが、やりたい動画が次々増えてしまい管理が難しくなったため、自分が欲しい機能だけを搭載した管理・記録アプリケーションを開発することにした。
 
-* Services (job queues, cache servers, search engines, etc.)
+## 洗い出した要件
 
-* Deployment instructions
 
-* ...
+## 実装した機能についての画像やGIF及び説明
+
+
+## 実装要諦の機能
+- スマートフォン対応
+- カレンダーを表示し、同期させる
+- todo、doing、doneそれぞれのみを表示する切り替えボタンの実装
+
+## データベース設計
+
+
+## 画面遷移図
+
+
+## 開発環境
+- フロントエンド
+- バックエンド
+- インフラ
+- テスト
+- テキストエディタ
+
+## ローカルでの動作方法
+
+
+## 工夫したポイント
+
