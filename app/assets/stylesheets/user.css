@@ -102,9 +102,7 @@ body {
 
 #error_explanation {
   margin: 20px 0;
-  padding: 20px 30px;
-  border: 1px solid #ddd;
-  border-radius: 2px;
+  padding: 0 20px 30px 50px;
 }
 #error_explanation h2 {
   margin-bottom: 10px;
@@ -125,11 +123,8 @@ body {
 .login-flash-message {
   margin: 20px 0;
   padding: 20px 30px;
-  border: 1px solid #ddd;
-  border-radius: 2px;
   margin-bottom: 10px;
   color: #d65f4c;
   font-size: 14px;
   list-style: square;
-  font-size: 13px;
 }

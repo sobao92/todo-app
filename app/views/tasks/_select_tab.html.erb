@@ -1,3 +1,7 @@
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
 <div class="cp_tab">
 	<input type="radio" name="cp_tab" id="tab1_1" aria-controls="first_tab01" checked>
 	<label for="tab1_1">WORK OUT</label>
@@ -7,7 +11,7 @@
 	<div class="cp_tabpanels">
 		<div id="first_tab01" class="cp_tabpanel">
 		  <h2>WORK OUT TASKS</h2>
-		  <%= link_to "Create New Task", new_task_path, class: 'create_task_btn' %>
+		  <%= link_to "Create New Task", new_task_path, method: :get, class: 'create_task_btn' %>
 				<table class="task_list">
 				  <thead>
 					  <tr>
@@ -23,11 +27,11 @@
 				    <% @tasks.each do |task| %>
 				    <tr>
 						  <td>
-					      <% if    task.state == 'todo' %>
+					      <% if    task.state == 'TODO' %>
                 <p class="btn btn-small  btn-block"><%= task.state %></p>
-                <% elsif task.state == 'doing' %>
+                <% elsif task.state == 'DOING' %>
                 <p class="btn btn-small btn-block amber"><%= task.state %></p>
-                <% elsif task.state == 'done' %>
+                <% elsif task.state == 'DONE' %>
                 <p class="btn btn-small disabled btn-block grey"><%= task.state %></p>
 								<% else %>
                 <p class="btn btn-small disabled btn-block"><%= task.state %></p>
@@ -36,10 +40,14 @@
 			        <td><%= task.task_title %></td>
 					    <td><%= task.task_description %></td>
 							<td>
-							  <%= link_to "編集", edit_task_path(task.id), method: :get, class: 'edit_btn', id: 'edit-btn' %>
+							  <%= link_to(edit_task_path(task.id), method: :get, class: 'edit_btn', id: 'edit-btn') do %>
+								  <i class="material-icons">create</i>
+								<% end %>
 							<td>
 							<td>
-							  <%= link_to "削除", task_path(task.id), method: :delete, class: 'delete_btn' %>
+							  <%= link_to(task_path(task.id), method: :delete, class: 'delete_btn') do %>
+					        <i class="material-icons">delete</i>
+								<% end %>
 							</td>
 						</tr>
 					  <% end %>
