@@ -30,7 +30,7 @@
       </div>
       <div class='create-task-form__select'>
         <div class="input-field col s12">
-          <%= f.select :state, [["", ""],["todo", "todo"], ["doing", "doing"]] %>
+          <%= f.select :state, [["タスクの状態を入力してください", ""],["TODO", "TODO"], ["DOING", "DOING"]] %>
         </div>
       </div>
     </div>
@@ -50,7 +50,7 @@
     document.addEventListener('DOMContentLoaded', function() {
       var elems = document.querySelectorAll('select');
       var instances = M.FormSelect.init(elems,[]);
-    }); 
+    });
   </script>
 
 </div>

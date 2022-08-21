@@ -7,7 +7,7 @@
 	<div class="cp_tabpanels">
 		<div id="first_tab01" class="cp_tabpanel">
 		  <h2>WORK OUT TASKS</h2>
-		  <%= link_to "Create New Task", new_task_path, class: 'create_task_btn' %>
+		  <%= link_to "Create New Task", new_task_path, method: :get, class: 'create_task_btn' %>
 				<table class="task_list">
 				  <thead>
 					  <tr>
@@ -23,11 +23,11 @@
 				    <% @tasks.each do |task| %>
 				    <tr>
 						  <td>
-					      <% if    task.state == 'todo' %>
+					      <% if    task.state == 'TODO' %>
                 <p class="btn btn-small  btn-block"><%= task.state %></p>
-                <% elsif task.state == 'doing' %>
+                <% elsif task.state == 'DOING' %>
                 <p class="btn btn-small btn-block amber"><%= task.state %></p>
-                <% elsif task.state == 'done' %>
+                <% elsif task.state == 'DONE' %>
                 <p class="btn btn-small disabled btn-block grey"><%= task.state %></p>
 								<% else %>
                 <p class="btn btn-small disabled btn-block"><%= task.state %></p>
