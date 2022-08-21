@@ -1,0 +1,12 @@
+.error-alert {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5vh;
+}
+
+.error-message {
+  padding: 0 30px;
+  color: #d65f4c;
+  font-size: 14px;
+  list-style: square;
+}

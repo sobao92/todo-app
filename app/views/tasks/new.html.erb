@@ -6,6 +6,7 @@
 <div class='create-task-form'>
   <h2>Create New Task</h2>
   <%=form_with model: @task, local: true do |f|%>
+    <%= render "/error_messages", model: f.object %>
     <div class='create-task-form__field'>
       <div class='create-task-form__field--left'>
         <%= f.label :Task, class: 'create-task-form__label'%>
