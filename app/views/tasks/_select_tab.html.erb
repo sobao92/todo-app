@@ -1,3 +1,7 @@
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
 <div class="cp_tab">
 	<input type="radio" name="cp_tab" id="tab1_1" aria-controls="first_tab01" checked>
 	<label for="tab1_1">WORK OUT</label>
@@ -36,10 +40,14 @@
 			        <td><%= task.task_title %></td>
 					    <td><%= task.task_description %></td>
 							<td>
-							  <%= link_to "編集", edit_task_path(task.id), method: :get, class: 'edit_btn', id: 'edit-btn' %>
+							  <%= link_to(edit_task_path(task.id), method: :get, class: 'edit_btn', id: 'edit-btn') do %>
+								  <i class="material-icons">create</i>
+								<% end %>
 							<td>
 							<td>
-							  <%= link_to "削除", task_path(task.id), method: :delete, class: 'delete_btn' %>
+							  <%= link_to(task_path(task.id), method: :delete, class: 'delete_btn') do %>
+					        <i class="material-icons">delete</i>
+								<% end %>
 							</td>
 						</tr>
 					  <% end %>
